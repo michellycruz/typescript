@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "outFile": "main.js", //modifica o arquivo de saída
+        "target": "ESNext" // ES2015 possui suporte para funções assincronas //ESNext é o mais atual
+    }
+}
