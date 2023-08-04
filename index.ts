@@ -25,3 +25,4 @@ const setPilot = (newPilot: string, spaceship: { name?: string; pilot: string; s
   accelerate(50, spaceship)
   sendToMission(spaceship)
 
+console.log(spaceship)
