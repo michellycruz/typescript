@@ -17,10 +17,11 @@ const setPilot = (newPilot: string, spaceship: { name?: string; pilot: string; s
     inMission: false
   }
 
-  const pilot = 'Han Solo'
+  const pilot = "Han Solo"
 
   spaceship.name = "millenium Falcon"
 
   setPilot(pilot, spaceship)
   accelerate(50, spaceship)
   sendToMission(spaceship)
+
