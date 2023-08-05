@@ -4,10 +4,10 @@ function verification(test){
     } else {
         let _check: never
 
-        let text = _check
+      //  let text = _check
 
-        text = ''
-        
-        return _check
+     //   text = ''
+
+      //  return _check
     }
 }
