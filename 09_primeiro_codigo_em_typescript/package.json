@@ -1,7 +1,6 @@
 {
   "name": "09_primeiro_codigo_em_typescript",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "tsc-watch": "tsc",
@@ -12,5 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.1.6"
-  }
+  },
+  "description": ""
 }

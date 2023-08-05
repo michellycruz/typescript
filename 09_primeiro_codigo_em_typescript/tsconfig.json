@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
-        "watch": true
+        "outDir": "dist"
     }
 }
