@@ -66,3 +66,19 @@ function thirdMenuOption() {
         }
     }
 }
+function fourthMenuOption() {
+    let list = `Naves Registradas:\n`;
+    spaceships.forEach((spaceship) => {
+        list += `
+        Nave: ${spaceship.name}
+        Piloto: ${spaceship.pilot}
+        Em missão? ${spaceship.inMission ? 'sim' : 'não'}
+        Tamanho máximo da tripulação: ${spaceship.crewLimit}
+        Tripulantes: ${spaceship.crew.length}
+        `;
+        spaceship.crew.forEach(member => {
+            list += `   -${member}\n`;
+        });
+    });
+    alert(list);
+}
