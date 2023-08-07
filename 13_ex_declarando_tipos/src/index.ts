@@ -46,3 +46,44 @@ function sendInMission(spaceship: {name: string, crewLimit: number, crew: string
         alert(`A nave ${spaceship.name} foi enviada para a missão com sucesso!!`)
     }
 }
+
+function firstMenuOption(){
+    const name = prompt(`Qual o nome da nave?`)
+    const crewLimit = Number(prompt(`Quantos tripulantes a nave ${name} suporta?`))
+    const pilot = prompt(`Qual o nome do piloto da nave ${name}?`)
+
+    const confirmation = confirm(`Confirma o cadastro da nave a baixo?\n Nome:${name}\n Limite de Tripulação: ${crewLimit}\n Nome do piloto: ${pilot}`)
+
+    if(confirmation){
+        addSpaceship(name, pilot, crewLimit)
+    }
+}
+
+function secondMenuOption(){
+    const member = prompt(`Qual é o nome do tripulante?`)
+    const spaceshipName = prompt(`Para qual nave ${member} deverá ser designado?`)
+
+    const spaceship = findSpaceship(spaceshipName)
+
+    if(spaceship){
+        const confirmation = confirm(`Confirma a inclusão de ${member} na tripulação de ${spaceshipName}`)
+
+        if(confirmation){
+            addCrewMember(member, spaceship)
+        }
+    }
+}
+
+function thirdMenuOption(){
+    const spaceshipName = prompt('Qual o nome da nave a ser enviada?')
+
+    const spaceship = findSpaceship(spaceshipName)
+
+    if(spaceship){
+        const confirmation = confirm(`Confirma o envio da nave ${spaceshipName} na missão`)
+
+        if(confirmation){
+            sendInMission(spaceship)
+        }
+    }
+}
