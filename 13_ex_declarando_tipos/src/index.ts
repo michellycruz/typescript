@@ -113,3 +113,37 @@ function fourthMenuOption(){
 
     alert(list)
 }
+
+let userOption = 0
+
+while (userOption !== 5){
+    const menu = `Painel Principal
+    1 - Registrar uma nave
+    2 - Adicionar membro da tripulação
+    3 - Enviar nave em missão
+    4 - Listar naves registradas
+    5 - Encerrar
+    `
+    userOption = Number(prompt(menu))
+
+    switch (userOption) {
+        case 1:
+            firstMenuOption()
+            break;
+        case 2:
+            secondMenuOption()
+            break;
+        case 3:
+            thirdMenuOption()
+            break;
+        case 4:
+            fourthMenuOption()
+            break;
+        case 5:
+            alert('Encerrando o programa...')
+            break;
+        default:
+            alert('Opção inválida')
+            break;
+    }
+}
