@@ -102,3 +102,17 @@ function firstMenuOption(){
         addPlanet(name, [coordinateA,coordinateB,coordinateC,coordinateD], situation)
     }
 }
+
+function secondMenuOption(){
+    promptValidPlanet(planet => {
+        const situation = promptValidSituation()
+        updateSituation(situation, planet)
+    })
+}
+
+function thirdMenuOption(){
+    promptValidPlanet(planet => {
+        const satellite = prompt("Informe o nome do satélite a ser adicionado:")
+        addSatellites(satellite,planet)
+    })
+}
