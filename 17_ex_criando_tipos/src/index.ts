@@ -75,3 +75,14 @@ function promptValidSituation(){
     }
     return situation
 }
+
+function promptValidPlanet(callbackfn:(planet: Planet) => void){
+    const planetName = prompt(`Informe o nome do planeta`)
+    const planet = findPlanet(planetName)
+
+    if(planet){
+        callbackfn(planet)
+    } else {
+        alert(`Planeta não encontrado`)
+    }
+}
