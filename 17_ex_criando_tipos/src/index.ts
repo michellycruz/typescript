@@ -116,3 +116,30 @@ function thirdMenuOption(){
         addSatellites(satellite,planet)
     })
 }
+
+function fourthMenuOption(){
+    promptValidPlanet(planet => {
+        const satellite = prompt("Informe o nome do satélite a ser removido:")
+        removeSatellite(satellite, planet)
+    })
+}
+
+function fifthMenuOption(){
+    let list = 'Planetas:\n'
+
+    planets.forEach(planet => {
+        const [a, b, c, d] = planet.coordinates
+
+        list += `
+            Nome: ${planet.name}
+            Coordenadas: (${a}, ${b}, ${c}, ${d})
+            Situação: ${planet.situation}
+            Satélites: ${planet.satellites.length}
+        `
+        planet.satellites.forEach(satellite => {
+            list += `   - ${satellite}\n`
+        })
+    })
+
+    alert(list)
+}
