@@ -1,4 +1,4 @@
-type PlanetSituation = "Habitado" | "Habitável" | "Inabitável" | "inexplorado"
+type PlanetSituation = "Habitado" | "Habitável" | "Inabitável" | "Inexplorado"
 
 type PlanetCoordinates = [number, number, number, number]
 
@@ -44,4 +44,34 @@ function removeSatellite(name:string, planet: Planet){
     planet.satellites = planet.satellites.filter(satellite => satellite !== name)
 
     alert(`O satélite ${name} foi removido do planeta ${planet.name}.`)
+}
+
+function promptValidSituation(){
+    let situation: PlanetSituation
+    let validSituation = false
+
+    while(!validSituation){
+        const inputSituation = prompt(`Por favor, informe a situação do planeta\n 1 - Habitado\n 2 - Habitável\n 3 - Inabitável\n 4 - Inexplorado`)
+
+        switch (inputSituation) {
+            case "1":
+                situation = "Habitado"
+                validSituation = true
+                break;
+            case "2":
+                situation = "Habitável"
+                validSituation = true
+                break;
+            case "3":
+                situation = "Inabitável"
+                validSituation = true
+                break;
+            case "4":
+                situation = "Inexplorado"
+                validSituation = true
+                break;  
+            default:
+                break;
+        }
+    }
 }
