@@ -1,7 +1,6 @@
 {
   "name": "17_ex_criando_tipos",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "typescript": "^5.1.6"
@@ -12,5 +11,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
