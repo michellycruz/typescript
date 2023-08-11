@@ -109,3 +109,38 @@ function fifthMenuOption() {
     });
     alert(list);
 }
+let userOption = 0;
+while (userOption !== 6) {
+    const menu = `Menu\n
+        1 - Registrar um novo planeta\n
+        2 - Atualizar situação do planeta\n
+        3 - Adicionar um satélite ao planeta\n
+        4 - Remover um satélite do planeta\n
+        5 - Listar todos os planetas\n
+        6 - sair
+        `;
+    userOption = Number.parseInt(menu);
+    switch (userOption) {
+        case 1:
+            firstMenuOption();
+            break;
+        case 2:
+            secondMenuOption();
+            break;
+        case 3:
+            thirdMenuOption();
+            break;
+        case 4:
+            fourthMenuOption();
+            break;
+        case 5:
+            fifthMenuOption();
+            break;
+        case 6:
+            alert('Encerrando o programa');
+            break;
+        default:
+            alert('Opção inválida, retornando ao menu principal');
+            break;
+    }
+}
