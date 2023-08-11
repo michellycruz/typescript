@@ -148,17 +148,17 @@ let userOption = 0
 
 while (userOption !== 6){
 
-    const menu = `Menu\n
-        1 - Registrar um novo planeta\n
-        2 - Atualizar situação do planeta\n
-        3 - Adicionar um satélite ao planeta\n
-        4 - Remover um satélite do planeta\n
-        5 - Listar todos os planetas\n
+    const menu = `Menu
+        1 - Registrar um novo planeta
+        2 - Atualizar situação do planeta
+        3 - Adicionar um satélite ao planeta
+        4 - Remover um satélite do planeta
+        5 - Listar todos os planetas
         6 - sair
         `
     
     
-    userOption = Number.parseInt(menu)
+    userOption = Number.parseInt(prompt(menu))
 
     switch (userOption){
         case 1:
@@ -180,7 +180,7 @@ while (userOption !== 6){
             alert('Encerrando o programa')
             break;
         default:
-            alert('Opção inválida, retornando ao menu principal')
+            alert('Opção inválida, retornando ao menu')
             break;
     }
 }
