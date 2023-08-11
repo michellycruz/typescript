@@ -1,5 +1,4 @@
 type PlanetSituation = "Habitado" | "Habitável" | "Inabitável" | "Inexplorado"
-
 type PlanetCoordinates = [number, number, number, number]
 
 type Planet = {
@@ -19,7 +18,6 @@ function addPlanet(name: string, coordinates: PlanetCoordinates, situation: Plan
         situation,
         satellites: []
     })
-
     alert(`O planeta ${name} foi adicionado com sucesso`)
 }
 
@@ -71,7 +69,9 @@ function promptValidSituation(){
                 validSituation = true
                 break;  
             default:
+                alert("Situação inválida")
                 break;
         }
     }
+    return situation
 }
