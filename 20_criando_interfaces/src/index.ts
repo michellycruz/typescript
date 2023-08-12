@@ -20,6 +20,10 @@ sun.mass = 1.989 * (10 ** 30)
 sun.age = 4.603 * (10 ** 9)
 sun.planets = []
 
+type Asteroid = CelestialBody & {
+    size: number
+}
+
 class MilkyWayPlanet implements Planet {
     name: string
     mass: number
@@ -32,6 +36,10 @@ class MilkyWayPlanet implements Planet {
     }
 
     createSatellite(name: string){
-        
+
     }
+}
+
+interface Planet{
+    satellites?: string[]
 }
