@@ -19,7 +19,7 @@ interface Ship {
   
   // Se deixássemos sem o tipo Ship desativaríamos
   // totalmente o typescript para esse argumento
-  function cloneShip(ship: Ship, newName: string, newPilot: string) {
+  function cloneShip<typeShip extends Ship>(ship: typeShip, newName: string, newPilot: string) {
     const newShip = ship
     newShip.name = newName
     newShip.pilot = newPilot
@@ -28,7 +28,7 @@ interface Ship {
   
   const falcon: Ship = {
     name: 'Millenium Falcon',
-    pilot: 'Han'
+    pilot: 'Han'  
   }
   
   const xWing: Fighter = {
